@@ -50,5 +50,48 @@ public class ActionBarTabsTest extends BaseTest {
 
     }
 
+    @Test
+    public void AlertDialogs(){
+
+        HomePage homePage = new HomePage(appiumDriver);
+        PermissionsController permissionsController = new PermissionsController(appiumDriver);
+        AppPage appPage = new AppPage(appiumDriver);
+        ActivityPage activityPage = new ActivityPage(appiumDriver);
+        AlertDialogsPage alertDialogsPage = new AlertDialogsPage(appiumDriver);
+        permissionsController.defaultPermissions();
+        homePage.popupOkButton();
+        homePage.appNameVerify();
+        homePage.goToAppPage();
+        appPage.goToAlertDialogs();
+        alertDialogsPage.selectListDialog();
+        alertDialogsPage.selectCommand();
+        alertDialogsPage.selectedCommandVerifyMessage();
+
+    }
+
+    @Test
+    public void DeviceAdmin(){
+        //Device Admin > General >Enable Admin açılmıyor testi yazılamadı !
+    }
+
+    @Test
+    public void ContextMenu() throws InterruptedException {
+
+        HomePage homePage = new HomePage(appiumDriver);
+        PermissionsController permissionsController = new PermissionsController(appiumDriver);
+        AppPage appPage = new AppPage(appiumDriver);
+        ActivityPage activityPage = new ActivityPage(appiumDriver);
+        FragmentPage fragmentPage = new FragmentPage(appiumDriver);
+        ContextMenuPage contextMenuPage = new ContextMenuPage(appiumDriver);
+        permissionsController.defaultPermissions();
+        homePage.popupOkButton();
+        homePage.appNameVerify();
+        homePage.goToAppPage();
+        appPage.goToFragment();
+        fragmentPage.selectContextMenu();
+        contextMenuPage.selectLongPressButton();
+        contextMenuPage.longPressMenuControl();
+    }
+
 
 }

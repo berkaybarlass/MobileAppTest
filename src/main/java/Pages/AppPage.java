@@ -17,4 +17,12 @@ public class AppPage extends CommonActions {
     public void goToActivity(){
         click(AppPageLocators.Activity);
     }
+
+    public void goToAlertDialogs(){
+        click(AppPageLocators.AlertDialogs);
+    }
+
+    public void goToFragment(){
+        click(AppPageLocators.Fragment);
+    }
 }
