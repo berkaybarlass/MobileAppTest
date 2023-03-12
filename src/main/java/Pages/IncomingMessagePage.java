@@ -1,13 +1,12 @@
-package Pages;
+package pages;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import org.CommonActions;
-import org.Locators.IncomingMessageLocators;
+import locators.IncomingMessageLocators;
 import org.openqa.selenium.By;
 
-import java.net.URL;
 import java.util.List;
 
 public class IncomingMessagePage extends CommonActions {
@@ -24,7 +23,6 @@ public class IncomingMessagePage extends CommonActions {
         ((AndroidDriver) appiumDriver).openNotifications();
         List<MobileElement> notifications = appiumDriver.findElements(By.id("android:id/notification_main_column"));
         notifications.get(0).click();
-
     }
 
 }

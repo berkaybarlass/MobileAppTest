@@ -1,15 +1,8 @@
-package Pages;
+package pages;
 
-import com.sun.org.apache.xpath.internal.operations.And;
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileElement;
 import org.CommonActions;
-import org.Locators.AndroidNativeLocators;
-import org.Locators.AppPageLocators;
-import org.Locators.HomePageLocators;
-import org.openqa.selenium.By;
-import org.openqa.selenium.support.FindBy;
-import org.testng.Assert;
+import locators.HomePageLocators;
 
 public class HomePage extends CommonActions {
 
@@ -26,13 +19,6 @@ public class HomePage extends CommonActions {
         click(HomePageLocators.APIDemosPopupOkButton);
     }
 
-    public void goToAppPage(){
-        click(HomePageLocators.App);
-    }
-
-    public void goToViews(){
-        click(HomePageLocators.Views);
-    }
 
 
 }

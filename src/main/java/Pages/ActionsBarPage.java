@@ -1,8 +1,8 @@
-package Pages;
+package pages;
 
 import io.appium.java_client.AppiumDriver;
 import org.CommonActions;
-import org.Locators.ActionsBarLocators;
+import locators.ActionsBarLocators;
 
 public class ActionsBarPage extends CommonActions {
 
@@ -10,7 +10,4 @@ public class ActionsBarPage extends CommonActions {
         super(appiumDriver);
     }
 
-    public void goToActionBarTabs(){
-        click(ActionsBarLocators.ActionBarTabs);
-    }
 }

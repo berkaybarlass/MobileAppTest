@@ -1,8 +1,8 @@
-package Pages;
+package pages;
 
 import io.appium.java_client.AppiumDriver;
 import org.CommonActions;
-import org.Locators.NotificationLocators;
+import locators.NotificationLocators;
 
 public class NotificationPage extends CommonActions {
 

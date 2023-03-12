@@ -1,8 +1,8 @@
-package Pages;
+package pages;
 
 import io.appium.java_client.AppiumDriver;
 import org.CommonActions;
-import org.Locators.CustomTitleLocators;
+import locators.CustomTitleLocators;
 import org.jetbrains.annotations.NotNull;
 import org.openqa.selenium.By;
 

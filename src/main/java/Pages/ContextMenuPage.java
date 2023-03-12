@@ -1,12 +1,11 @@
-package Pages;
+package pages;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.TouchAction;
 import org.CommonActions;
-import org.Locators.ContextMenuLocators;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 
 import static io.appium.java_client.touch.LongPressOptions.longPressOptions;
 import static io.appium.java_client.touch.offset.ElementOption.element;
@@ -32,12 +31,12 @@ public class ContextMenuPage extends CommonActions {
             String menuBText = menuB.getText();
 
             if (menuAText.equals("Menu A") && menuBText.equals("Menu B")) {
-                System.out.println("Menü öğeleri doğru şekilde görüntüleniyor.");
+                System.out.println("Menu items are displayed correctly.");
             } else {
-                System.out.println("Menü öğeleri doğru şekilde görüntülenmiyor.");
+                Assert.fail("Menu items are not displayed correctly.");
             }
         } else {
-            System.out.println("Menü öğeleri görüntülenmiyor.");
+            Assert.fail("Menu items are not displayed.");
         }
     }
 }

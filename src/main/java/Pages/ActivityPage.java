@@ -1,8 +1,8 @@
-package Pages;
+package pages;
 
 import io.appium.java_client.AppiumDriver;
 import org.CommonActions;
-import org.Locators.ActivityPageLocators;
+import locators.ActivityPageLocators;
 
 public class ActivityPage extends CommonActions {
 
@@ -10,7 +10,4 @@ public class ActivityPage extends CommonActions {
         super(appiumDriver);
     }
 
-    public void goToCustomTitle(){
-        click(ActivityPageLocators.CustomTitle);
-    }
 }

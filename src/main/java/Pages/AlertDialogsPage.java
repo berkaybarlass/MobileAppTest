@@ -1,8 +1,8 @@
-package Pages;
+package pages;
 
 import io.appium.java_client.AppiumDriver;
 import org.CommonActions;
-import org.Locators.AlertDialogsLocators;
+import locators.AlertDialogsLocators;
 
 public class AlertDialogsPage extends CommonActions {
 

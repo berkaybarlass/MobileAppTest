@@ -1,8 +1,8 @@
-package Pages;
+package pages;
 
 import io.appium.java_client.AppiumDriver;
 import org.CommonActions;
-import org.Locators.ActionsBarTabsLocators;
+import locators.ActionsBarTabsLocators;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 

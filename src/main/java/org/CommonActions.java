@@ -12,22 +12,14 @@ import org.testng.Assert;
 public class CommonActions  {
     public AppiumDriver appiumDriver;
 
-    //public CommonActions(AppiumDriver appiumDriver){
-        //PageFactory.initElements(new AppiumFieldDecorator(appiumDriver),this);
-        //this.appiumDriver = appiumDriver;
-    //}
-
     public CommonActions(AppiumDriver appiumDriver) {
         this.appiumDriver = appiumDriver;
-
     }
 
     public void verifyTextEquals(By locator, String expectedText) {
         String actualText = appiumDriver.findElement(locator).getText();
         Assert.assertEquals(actualText, expectedText);
     }
-
-
 
     public void clickableForElement(MobileElement element){
         WebDriverWait wait = new WebDriverWait(appiumDriver, 50);
@@ -45,6 +37,17 @@ public class CommonActions  {
     public void fillText(By locator, String value){
         appiumDriver.findElement(locator).sendKeys(value);
     }
+
+    public void goToSelectedPage(String selectedPageName)
+    {
+        String xpath = "//*[@text='" + selectedPageName + "']";
+        click(By.xpath(xpath));
+    }
+
+    public void clearCache(){
+        appiumDriver.resetApp();
+    }
+
 
 
 

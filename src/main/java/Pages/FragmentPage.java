@@ -1,8 +1,8 @@
-package Pages;
+package pages;
 
 import io.appium.java_client.AppiumDriver;
 import org.CommonActions;
-import org.Locators.FragmentLocators;
+import locators.FragmentLocators;
 
 public class FragmentPage extends CommonActions {
 
