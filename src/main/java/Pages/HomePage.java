@@ -30,6 +30,9 @@ public class HomePage extends CommonActions {
         click(HomePageLocators.App);
     }
 
+    public void goToViews(){
+        click(HomePageLocators.Views);
+    }
 
 
 }

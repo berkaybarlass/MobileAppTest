@@ -1,4 +1,5 @@
 import Pages.*;
+import org.Locators.TabsLocators;
 import org.testng.annotations.Test;
 
 public class ActionBarTabsTest extends BaseTest {
@@ -92,6 +93,65 @@ public class ActionBarTabsTest extends BaseTest {
         contextMenuPage.selectLongPressButton();
         contextMenuPage.longPressMenuControl();
     }
+
+    @Test
+    public void HideAndShow()  {
+
+        HomePage homePage = new HomePage(appiumDriver);
+        PermissionsController permissionsController = new PermissionsController(appiumDriver);
+        AppPage appPage = new AppPage(appiumDriver);
+        ActivityPage activityPage = new ActivityPage(appiumDriver);
+        FragmentPage fragmentPage = new FragmentPage(appiumDriver);
+        HideAndShowPage hideAndShowPage = new HideAndShowPage(appiumDriver);
+        permissionsController.defaultPermissions();
+        homePage.popupOkButton();
+        homePage.appNameVerify();
+        homePage.goToAppPage();
+        appPage.goToFragment();
+        fragmentPage.selectHideAndShowMenu();
+        hideAndShowPage.controlElements();
+        hideAndShowPage.showHideButtonControl();
+        hideAndShowPage.showChange();
+        hideAndShowPage.showHideButtonControl();
+        hideAndShowPage.showButtonTurnHideVerify();
+    }
+
+    @Test
+    public void IncomingMessage()  {
+
+        HomePage homePage = new HomePage(appiumDriver);
+        PermissionsController permissionsController = new PermissionsController(appiumDriver);
+        AppPage appPage = new AppPage(appiumDriver);
+        NotificationPage notificationPage = new NotificationPage(appiumDriver);
+        IncomingMessagePage incomingMessagePage = new IncomingMessagePage(appiumDriver);
+        permissionsController.defaultPermissions();
+        homePage.popupOkButton();
+        homePage.appNameVerify();
+        homePage.goToAppPage();
+        appPage.goToNotification();
+        notificationPage.selectIncomingMessage();
+        incomingMessagePage.showNotification();
+        incomingMessagePage.openNotificationBar();
+    }
+
+    @Test
+    public void Tabs()  {
+
+        HomePage homePage = new HomePage(appiumDriver);
+        PermissionsController permissionsController = new PermissionsController(appiumDriver);
+        AppPage appPage = new AppPage(appiumDriver);
+        ViewsPage viewsPage = new ViewsPage(appiumDriver);
+        TabsPage tabsPage = new TabsPage(appiumDriver);
+
+        permissionsController.defaultPermissions();
+        homePage.popupOkButton();
+        homePage.appNameVerify();
+        homePage.goToViews();
+        viewsPage.goToTabs();
+        tabsPage.selectScrollable();
+        tabsPage.lastTab();
+    }
+
 
 
 }

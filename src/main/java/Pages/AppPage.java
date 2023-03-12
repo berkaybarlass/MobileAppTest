@@ -25,4 +25,8 @@ public class AppPage extends CommonActions {
     public void goToFragment(){
         click(AppPageLocators.Fragment);
     }
+
+    public void goToNotification(){
+        click(AppPageLocators.Notification);
+    }
 }

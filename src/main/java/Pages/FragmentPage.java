@@ -13,5 +13,7 @@ public class FragmentPage extends CommonActions {
     public void selectContextMenu(){
         click(FragmentLocators.ContextMenu);
     }
-
+    public void selectHideAndShowMenu(){
+        click(FragmentLocators.HideAndShow);
+    }
 }
