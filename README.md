@@ -9,9 +9,9 @@
 <p> The main goal of the project was to make the tests run successfully and avoid code repetition.</p>
 
 <h3>Action Bar Tabs Test </h3>
+
 https://user-images.githubusercontent.com/74761090/224572197-cb9e39e4-93cf-4e48-b536-03af5d167c28.mp4
 
 <h3>Scrollable Tab (Horizontal and Vertical)</h3>
 
 https://user-images.githubusercontent.com/74761090/224572310-e34a44c5-9318-43eb-a8d9-3a6ba1eca406.mp4
-
