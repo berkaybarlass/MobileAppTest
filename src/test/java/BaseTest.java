@@ -27,7 +27,7 @@ public class BaseTest {
 
     @AfterMethod
     public void TearDown(){
-        appiumDriver.quit();
+       // appiumDriver.quit();
         System.out.println("Test is finished");
     }
 }

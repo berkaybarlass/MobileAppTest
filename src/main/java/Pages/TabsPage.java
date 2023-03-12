@@ -21,11 +21,13 @@ public class TabsPage extends CommonActions {
 
     public void lastTab() {
         MobileElement element = (MobileElement) appiumDriver.findElement(MobileBy.AndroidUIAutomator(
-                "new UiScrollable(new UiSelector().scrollable(true).setAsVerticalList())"
-                        + ".scrollToEnd(1).scrollIntoView(new UiSelector().resourceIdMatches(\".*id/tabhost\").childSelector(new UiSelector().className(\"android.widget.TabWidget\")).childSelector(new UiSelector().className(\"android.widget.LinearLayout\").index(5)).childSelector(new UiSelector().className(\"android.widget.TextView\").text(\"TAB 30\")))"));
-
-
-        element.click();
+                "new UiScrollable(new UiSelector().scrollable(true).instance(0)).setAsHorizontalList().scrollToEnd(1).scrollIntoView(new UiSelector().text(\"TAB 30\"))"));
+        click(TabsLocators.tab5);
     }
 
+    public void checkedSelectedTab(){
+        verifyTextEquals(TabsLocators.SelectedTabShowText, "Content for tab with tag Tab 30");
+
     }
+
+}

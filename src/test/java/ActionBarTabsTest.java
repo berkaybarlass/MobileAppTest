@@ -150,6 +150,7 @@ public class ActionBarTabsTest extends BaseTest {
         viewsPage.goToTabs();
         tabsPage.selectScrollable();
         tabsPage.lastTab();
+        tabsPage.checkedSelectedTab();
     }
 
 
